@@ -1,5 +1,5 @@
-defmodule Words do
-  @splitter_regex ~r/[\s(\!-\,)(\:-\@)(\[-\`)]+/u
+defmodule WordCount do
+  @splitter_regex ~r/[^[:alnum:]-]+/u
 
   @spec count(String.t()) :: map
   def count(sentence) do
